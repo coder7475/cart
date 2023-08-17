@@ -1,89 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flower Sale</title>
-    <!-- connect to tailwind and daisyui usning CDN  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower Sale</title>
+  <!-- connect to tailwind and daisyui usning CDN  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <header>
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <label tabindex="0" class="btn btn-ghost btn-circle">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-                </label>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Homepage</a></li>
-                  <li><a>Portfolio</a></li>
-                  <li><a>About</a></li>
-                </ul>
+  <header>
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Homepage</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a class="btn btn-ghost normal-case text-xl">Flower</a>
+      </div>
+      <div class="navbar-end">
+        
+        
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="mt-4">
+      <h1 class="text-4xl text-center p-2 mb-2">All Flower Cards</h1>
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+          <div class="card bg-base-100 shadow-xl">
+            <figure><img class="object-fill h-56 w-96" src="./flowers/pink.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Pink Flower</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quos!</p>
+              <p class="font-bold">Price: $<span id="pink">50</span>
+              </p>
+              <div class="card-actions justify-first">
+                <button class="btn btn-secondary" id="btn-pink" onclick="clickHandler(this)">Add to Cart</button>
               </div>
             </div>
-            <div class="navbar-center">
-              <a class="btn btn-ghost normal-case text-xl">Flower</a>
+          </div>
+          <div class="card bg-base-100 shadow-xl">
+            <figure><img class="object-fill h-56 w-96" src="./flowers/wedding.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Wedding Flower</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quos!</p>
+              <p class="font-bold">Price: $<span id="wedding">500</span>
+              </p>
+              <div class="card-actions justify-first">
+                <button class="btn btn-secondary" id="btn-wedding" onclick="clickHandler(this)">Add to Cart</button>
+              </div>
             </div>
-            <div class="navbar-end">
-              <button class="btn btn-ghost btn-circle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-              </button>
-              <button class="btn btn-ghost btn-circle">
-                <div class="indicator">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
-                  <span class="badge badge-xs badge-primary indicator-item"></span>
-                </div>
-              </button>
+          </div>
+          <div class="card bg-base-100 shadow-xl">
+            <figure><img class="object-fill h-56 w-96" src="./flowers/white.jpg" alt="white_flowers" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">White Flower</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quos!</p>
+              <p class="font-bold">Price: $<span id="white">100</span>
+              </p>
+              <div class="card-actions justify-first">
+                <button class="btn btn-secondary" id="btn-white" onclick="clickHandler(this)">Add to Cart</button>
+              </div>
             </div>
+          </div>
+          <div class="card bg-slate-100 gap-2">
+            <h2 class="text-2xl">Code:Hero</h2>
+            <ul id="list"></ul>
+            <h3 class="text-xl">total: <span id="total">00</span></h3>
+            <h3 class="text-xl">discount: <span id="discount">00</span></h3>
+            <hr>
+            <h2 class="text-2xl">Grand Total: <span id="grand-total">00</span></h2>
+          </div>
         </div>
-    </header>
 
-    <main>
-        <div class="mt-4">
-            <h1 class="text-4xl text-center">All Flower Cards</h1>
-            <div class="flex flex-col md:flex-row">
-                <div class="grid grid-cols-3">
-                    <div class="card w-96 bg-base-100 shadow-xl">
-                        <figure ><img class="object-fill h-56 w-96" src="./flowers/pink.jpg" alt="Shoes" /></figure>
-                        <div class="card-body">
-                          <h2 class="card-title">Shoes!</h2>
-                          <p>If a dog chews shoes whose shoes does he choose?</p>
-                          <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="card w-96 bg-base-100 shadow-xl">
-                        <figure><img class="object-fill h-56 w-96" src="./flowers/pink.jpg" alt="Shoes" /></figure>
-                        <div class="card-body">
-                          <h2 class="card-title">Shoes!</h2>
-                          <p>If a dog chews shoes whose shoes does he choose?</p>
-                          <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="card w-96 bg-base-100 shadow-xl">
-                        <figure><img class="object-fill h-56 w-96" src="./flowers/pink.jpg" alt="Shoes" /></figure>
-                        <div class="card-body">
-                          <h2 class="card-title">Shoes!</h2>
-                          <p>If a dog chews shoes whose shoes does he choose?</p>
-                          <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div></div>
-            </div>
-            
-        </div>
-    </main>
-    
-    <footer>
+      </div>
 
-    </footer>
+    </div>
+  </main>
+
+  <footer>
+
+  </footer>
+  <script src="./scripts/index.js"></script>
 </body>
+
 </html>
